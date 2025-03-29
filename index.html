@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interaktiv Tidslinje – Köksrenovering</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f7f7f7;
+    }
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #2196f3;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .container.left {
+      left: 0;
+    }
+    .container.right {
+      left: 50%;
+    }
+    .content {
+      padding: 20px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .date {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #2196f3;
+    }
+    .container::before {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #2196f3;
+      border: 4px solid white;
+      z-index: 1;
+    }
+    .container.left::before {
+      right: -17px;
+    }
+    .container.right::before {
+      left: -17px;
+    }
+    @media screen and (max-width: 600px) {
+      .timeline::after {
+        left: 31px;
+      }
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .container.right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>🛠️ Interaktiv Tidslinje – Köksrenovering</h2>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <div class="date">Vecka 16</div>
+        <p>Elbolag tar ner el i befintligt kök.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <div class="date">Vecka 17</div>
+        <p>Hantverkare river vägg.<br>Elbolag drar ny el.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <div class="date">Vecka 18</div>
+        <p>Rivning av klinker, förberedelse för element.<br>Spackling och målning.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <div class="date">Vecka 19</div>
+        <p>Golvfirma lägger parkett.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <div class="date">Vecka 20</div>
+        <p>Golvfirma slipar och lackar golv.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <div class="date">Vecka 21</div>
+        <p>Köket sätts upp.<br>Stenskivemått tas och beställs.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <div class="date">Vecka 23</div>
+        <p>Bänkskivan installeras.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
